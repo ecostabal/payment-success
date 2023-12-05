@@ -66,4 +66,10 @@ p {
         font-size: 12px;
         color: rgb(49, 49, 49)
     }
+
+    /* Oculta el desplazamiento vertical */
+    body {
+        overflow-y: hidden;
+    }
 }
+
