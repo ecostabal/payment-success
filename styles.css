@@ -70,6 +70,8 @@ p {
 
     /* Oculta el desplazamiento vertical */
     body {
+        margin-left: 40px;
+        margin-right: 40px;
         overflow-y: hidden;
         height: 70vh;
     }
