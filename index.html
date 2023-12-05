@@ -6,6 +6,26 @@
     <title>¡Pago Exitoso!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/assets/ISOTIPO copia.png" type="image/x-icon">
+    <script>
+        // Definimos la cantidad de segundos que quieres para la redirección
+        var segundos = 10;
+        
+        // Función para actualizar el contador y redirigir
+        function redirigir() {
+            if (segundos <= 0) {
+                window.location.href = "https://urbx.io";
+            } else {
+                document.getElementById("contador").textContent = segundos;
+                segundos--;
+                setTimeout(redirigir, 1000); // Actualiza cada segundo (1000 milisegundos)
+            }
+        }
+        
+        // Iniciamos el contador cuando la página se carga completamente
+        window.onload = function() {
+            redirigir();
+        };
+    </script>
 </head>
 <body>
     <div>
@@ -17,12 +37,7 @@
        </div>
        <div class="cajatexto">
             <h2 class="titulo">Pago Exitoso.</h2>
-            <p>¡Buenas noticias, hemos recibido tu pago exitosamente!</p>
-       </div>
-       <div class="cajaboton">
-            <button onclick="window.location.href='https://urbx.io'">
-                Ir a nuestro sitio web
-            </button>        
+            <p>Serás redireccionado en <span id="contador">10</span> segundos a nuestra página web.</p>
        </div>
     </div>
 </body>
