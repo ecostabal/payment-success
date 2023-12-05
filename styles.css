@@ -18,9 +18,9 @@ div {
     color: rgb(49, 49, 49)
 }
 
+/* Estilo para el botón */
 button:hover {
     background-color: rgb(29, 29, 29);
-
 }
 
 /* Estilo para las imágenes */
@@ -30,18 +30,40 @@ img {
 }
 
 .logo {
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
 }
 
 .icon {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 }
 
 .cajalogo {
-    margin-bottom: 50px;
+    margin-bottom: 20px; /* Reducido el margen inferior */
 }
 
 p {
     font-size: 20px;
     color: rgb(49, 49, 49)
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 24px; /* Reduce el tamaño del título */
+    }
+
+    .logo {
+        max-width: 150px; /* Reduce el tamaño del logo */
+    }
+
+    .icon {
+        max-width: 150px; /* Reduce el tamaño del icono */
+    }
+
+    p {
+        font-size: 12px;
+        color: rgb(49, 49, 49)
+    }
 }
